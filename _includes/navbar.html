@@ -1,0 +1,54 @@
+<header class="navbar container" data-pagefind-ignore>
+    <a href="{{ "/" | locale_url }}"><img height="60" src="/assets/img/logo.svg"/>
+        <div class="logo-items">
+            <h1 class="logo-title">P R I M A</h1>
+            <h3 class="logo-subtitle">
+            Pedagogical Repository for Italian Media Activities
+            </h3>
+        </a>
+    </div>
+    <ul class="main-nav">
+        {% if page.lang == 'it' %}
+        <div class="dropdown">
+            <button class="dropbtn">Informazioni
+            </button>
+            <div class="dropdown-content">
+                <a href="#">A proposito di Prima</a>
+                <a href="#">Note legali</a>
+                <a href="#">Crediti</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="/it/lezioni">Lezioni</a>
+            
+        </div>
+        <div class="dropdown">
+            <a href="/it/indice">Indice</a>
+            
+        </div>
+        <a href="/en/"><img height="30" style="margin-right:10px" src="/assets/img/en.svg" /></a>
+        {% endif %}
+        {% if page.lang == 'en' %}
+        <div class="dropdown">
+            <button class="dropbtn">About
+            </button>
+            <div class="dropdown-content">
+                <a href="#">About Prima</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Acknowledgements</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="/en/lessons">Lessons</a>
+            
+        </div>
+        <div class="dropdown">
+            <a href="/en/index-page">Index</a>
+            
+        </div>
+        <a href="/it/"><img height="30" style="margin-right:10px" src="/assets/img/it.svg" /></a>
+        {% endif %}
+
+    </ul>
+
+</header>
