@@ -35,7 +35,7 @@ module.exports = function (eleventyConfig) {
         // handle the case when either `collection` or `key` is not defined
         return "";
     });
-    // eleventyConfig.on('eleventy.after', () => {
-    //     execSync(`npx pagefind --source _site --glob \"**/*.html\"`, { encoding: 'utf-8' })
-    // })
+    eleventyConfig.on('eleventy.after', () => {
+        execSync(`npx pagefind --source _site --glob \"**/*.html\"`, { encoding: 'utf-8' })
+    })
 };
