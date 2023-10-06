@@ -6,15 +6,13 @@ title: Search
     <link href="/_pagefind/pagefind-ui.css" rel="stylesheet">
     <script src="/_pagefind/pagefind-ui.js"></script>
 {% endblock %}
- 
 
- <div id="search" class=""></div>
+<div id="search" class=""></div>
 
 {% block js %}
-<script>
-    window.addEventListener('DOMContentLoaded', (event) => {
-        new PagefindUI({ element: "#search" });
-    });
-    
-</script>
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({element: "#search"});
+        });
+    </script>
 {% endblock %}
