@@ -13,7 +13,7 @@ collections:
   - name: "lezioni" # Used in routes, e.g., /admin/collections/blog
     editor:
       preview: false
-    label: "Video (IT)" # Used in the UI
+    label: "Lezioni (IT)" # Used in the UI
     identifier_field: lezione
     folder: "it/lezioni" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
@@ -23,55 +23,56 @@ collections:
       - label: "Titolo"
         name: "title"
         widget: "string"
-      #Citation Information
-      - label: "Informazioni sulla citazione"
-        name: citation_information
-        widget: markdown
-        required: false
-      # Thumbnail
-      - label: "Immagine in primo piano"
-        name: "thumbnail"
-        widget: "image"
-        choose_url: true
-        required: false
-        default: "/assets/img/default.png"
-        media_library:
-          config:
-            multiple: true
-      # Related media (m2m)
-      - label: "Related Media"
+      # Media
+      - label: "Media"
         name: "media"
-        required: false
-        widget: "relation"
-        collection: "media"
-        search_fields: ["title"]
-        value_field: "title"
-        display_fields: ["title"]
-      # Related files 
-      - label: "PDF File"
-        name: "pdf_file"
-        widget: "file"
-      - label: "Testimonials"
-        name: "testimonials"
         widget: "list"
         fields:
-          - {label: Quote, name: quote, widget: string, default: "Everything is awesome!"}
-          - label: Author
-            name: author
+          - label: MediaFile
+            name: mediafile
             widget: object
             fields:
-              - {label: Name, name: name, widget: string, default: "Emmet"}
-              - {label: Avatar, name: avatar, widget: image, default: "/img/emmet.jpg"}
+              # Title
+              - label: Titulo
+                name: titulo
+                widget: string
+              # Video Embed
+              - label: "Incorporamento video" 
+                name: "video_embed" 
+                widget: "string" 
+                required: false
+              - label: "File"
+                name: "file"
+                widget: "file"
+              # Thumbnail
+              - label: "Immagine in primo piano"
+                name: "thumbnail"
+                widget: "image"
+                choose_url: true
+                required: false
+                default: "/assets/img/default.png"
+                media_library:
+                  config:
+                    multiple: true
+              #Citation Information
+              - label: "Informazioni sulla citazione"
+                name: citation_information
+                widget: markdown
+                required: false
+      
+      - label: "Lesson Files"
+        name: "lesson-files"
+        widget: "list"
+        fields:
+          - label: "File"
+            name: "file"
+            widget: "file"
+      
 
-
       
       
       
-      # Video Embed
-      - label: "Incorporamento video" 
-        name: "video_embed" 
-        widget: "string" 
-        required: false
+      
       # Video Embed Subtitles
       - label: "Sottotitoli incorporati nel video" 
         name: "video_embed_subtitles" 

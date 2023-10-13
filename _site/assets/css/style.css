@@ -88,6 +88,20 @@ video {
     width:40vw;
     min-width:300px !important;
 }
+.lesson-metadata-box {
+    background-color: #F9FCF3;
+    ;
+    padding: 20px;
+  }
+
+.lesson-image:hover {
+    background-color: #F0F3EA;
+    text-decoration:underline dotted var(--prima-red) 2px;
+    cursor:pointer;
+    /* transform: scale(1.05); */
+  }
+  
+
 
 iframe{
     min-width:300px !important;

@@ -22,6 +22,6 @@ citation_information: |-
   Y﻿ear: 2015
 thumbnail: /assets/media/porpora.jpeg
 lezioni: AntoloGaia
----
-
-Hi there
+video: https://mediaspace.library.upenn.edu/id/1_ih9da7ms?width=400&height=285&playerId=9757771
+pdf_file: /assets/media/impossible-conditional-antologaia.pdf
+doc_file: /assets/media/impossible-conditional-antologaia.docx

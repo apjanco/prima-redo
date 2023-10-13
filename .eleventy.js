@@ -1,5 +1,11 @@
 const { EleventyI18nPlugin } = require("@11ty/eleventy");
 const { execSync } = require('child_process')
+const md = require("markdown-it")({
+    html: true,
+    linkify: true,
+    typographer: true,
+    breaks: true
+  });
 
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("assets");
@@ -35,6 +41,9 @@ module.exports = function (eleventyConfig) {
         // handle the case when either `collection` or `key` is not defined
         return "";
     });
+    eleventyConfig.addFilter("markdownify", (markdownString) =>
+        md.render(markdownString)
+    );
     eleventyConfig.on('eleventy.after', () => {
         execSync(`npx pagefind --source _site --glob \"**/*.html\"`, { encoding: 'utf-8' })
     })
