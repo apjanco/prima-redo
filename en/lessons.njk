@@ -34,22 +34,22 @@ title: Lessons
     <div class="filters-group">
       <p class="filter-label">Filter</p>
       <div class="btn-group filter-options">
-        <p><b>Level</b></p>
-        {% for level in collections.lessons | distinct('level') %}
-          <input type="checkbox" data-group="{{ level }}" value="{{ level }}">
-          <label for="{{ level }}">{{ level }}</label><br>
+        <p><b>Grammar</b></p>
+        {% for grammar in collections.lessons | distinct('grammar') %}
+          <input type="checkbox" data-group="{{ grammar }}" value="{{ grammar }}">
+          <label for="{{ grammar }}">{{ grammar }}</label><br>
         {% endfor %}
 
-        <p><b>Practice</b></p>
-        {% for practice in collections.lessons | distinct('practice') %}
-          <input type="checkbox" data-group="{{ practice }}" value="{{ practice }}">
-          <label for="{{ practice }}">{{ practice }}</label><br>
+        <p><b>Vocab</b></p>
+        {% for vocab in collections.lessons | distinct('vocab') %}
+          <input type="checkbox" data-group="{{ vocab }}" value="{{ vocab }}">
+          <label for="{{ vocab }}">{{ vocab }}</label><br>
         {% endfor %}
 
-        <p><b>Learning outcomes</b></p>
-        {% for learning_outcome in collections.lessons | distinct('learning_outcome') %}
-          <input type="checkbox" data-group="{{ learning_outcome }}" value="{{ learning_outcome }}">
-          <label for="{{ learning_outcome }}">{{ learning_outcome }}</label><br>
+        <p><b>Culture</b></p>
+        {% for culture in collections.lessons | distinct('culture') %}
+          <input type="checkbox" data-group="{{ culture }}" value="{{ culture }}">
+          <label for="{{ culture }}">{{ culture }}</label><br>
         {% endfor %}
 
       </div>
@@ -59,9 +59,9 @@ title: Lessons
 <div id="grid" class="my-shuffle-container">
     {%- for lesson in collections.lessons -%}
       {% set all_values = [] %}
-      {% if lesson.data.level%}{% for level in lesson.data.level%}{% set all_values = (all_values.push(level), all_values) %}{% endfor %}{% endif%}
-      {% if lesson.data.practice%}{% for practice in lesson.data.practice%}{% set all_values = (all_values.push(practice), all_values) %}{% endfor %}{% endif%}
-      {% if lesson.data.learning_outcome%}{% for learning_outcome in lesson.data.learning_outcome%}{% set all_values = (all_values.push(learning_outcome), all_values) %}{% endfor %}{% endif%}
+      {% if lesson.data.grammar%}{% for grammar in lesson.data.grammar%}{% set all_values = (all_values.push(grammar), all_values) %}{% endfor %}{% endif%}
+      {% if lesson.data.vocab%}{% for vocab in lesson.data.vocab%}{% set all_values = (all_values.push(vocab), all_values) %}{% endfor %}{% endif%}
+      {% if lesson.data.culture%}{% for culture in lesson.data.culture%}{% set all_values = (all_values.push(culture), all_values) %}{% endfor %}{% endif%}
       <figure onclick="window.location.href='{{ lesson.url }}';" class="col-5@xs col-5@sm col-4@md picture-item picture-item--h2" data-groups='[{% if all_values %}{% for value in all_values %}{% if loop.last %}"{{ value }}"{% else %}"{{ value }}",{% endif %}{% endfor %}{% endif%}]' data-title="{{ lesson.data.lesson }}">
         <div class="picture-item__inner">
           <div class="aspect aspect--16x9">

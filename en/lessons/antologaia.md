@@ -2,12 +2,12 @@
 title: AntoloGaia
 media:
     - /assets/media/porpora.jpeg
-medium:
+culture:
   - Text
-practice:
+vocab:
   - Grammar
   - Reading
-learning_outcome:
+grammar:
   - Conditional Clauses of Impossibility
 level:
   - Intermediate
