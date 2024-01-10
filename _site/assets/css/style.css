@@ -92,7 +92,12 @@ video {
     background-color: #F9FCF3;
     ;
     padding: 20px;
+    justify-content: space-evenly;
   }
+
+.meta-button{
+    margin:0px !important;
+}
 
 .lesson-image:hover {
     background-color: #F0F3EA;
