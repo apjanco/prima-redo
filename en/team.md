@@ -1,3 +1,5 @@
+<h2> Team </h2>
+
 **Julia Heim** is the ideator, primary grant writer, co-content creator, and diversity manager of PRIMA. 
 
 **Samantha Gillen** is the primary content creator, content manager, accessibility technician, and general PRIMA workhorse.
