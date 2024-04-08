@@ -45,6 +45,6 @@ module.exports = function (eleventyConfig) {
         md.render(markdownString)
     );
     eleventyConfig.on('eleventy.after', () => {
-        execSync(`npx pagefind --source _site --glob \"**/*.html\"`, { encoding: 'utf-8' })
+        execSync(`npx pagefind --site _site --glob \"**/*.html\"`, { encoding: 'utf-8' })
     })
 };
